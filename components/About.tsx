@@ -46,7 +46,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             About <span className="text-primary">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
+          <div className="w-20 h-1 bg-linear-to-r from-primary to-accent rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -84,7 +84,7 @@ export default function About() {
                     initial={{ width: 0 }}
                     animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
                     transition={{ duration: 1.2, ease: 'easeOut' }}
-                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
+                    className="h-full bg-linear-to-r from-primary to-accent rounded-full"
                   />
                 </div>
               </motion.div>

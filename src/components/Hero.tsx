@@ -1,5 +1,6 @@
 'use client'
 
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
@@ -20,6 +21,17 @@ const containerVariants = {
 }
 
 export default function Hero() {
+  const [name, setName] = useState<string | null>(null)
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('name')
+      if (stored) setName(stored)
+    } catch (e) {
+      // ignore — localStorage may be unavailable in some environments
+    }
+  }, [])
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Animated background elements */}
@@ -49,7 +61,9 @@ export default function Hero() {
         className="relative z-10 text-center max-w-4xl mx-auto px-6"
       >
         <motion.div variants={textVariants} className="mb-6">
-          <span className="text-accent font-semibold text-lg">Welcome to Xean Coral portfolio</span>
+          <span className="text-white font-semibold text-lg">
+            {name ? `Welcome, ${name}!` : "Welcome to Xean Coral's portfolio"}
+          </span>
         </motion.div>
 
         <motion.h1
@@ -57,7 +71,7 @@ export default function Hero() {
           className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight"
         >
           Crafting Digital <br />
-          <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             Experiences
           </span>
         </motion.h1>
@@ -76,7 +90,7 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(58, 130, 246, 0.3)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-full font-semibold hover:shadow-xl transition-shadow"
+            className="px-8 py-4 bg-linear-to-r from-primary to-accent text-white rounded-full font-semibold hover:shadow-xl transition-shadow"
           >
             View My Work
           </motion.button>

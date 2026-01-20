@@ -74,7 +74,8 @@
   --sidebar-ring: oklch(0.58 0.18 200);
 }
 
-@theme inline {
+/* Inline theme variable aliases for compatibility with tools that don't recognize @theme */
+:root {
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
@@ -116,10 +117,22 @@
 }
 
 @layer base {
+  /* Use explicit CSS properties instead of Tailwind @apply to avoid editor warnings
+     Tailwind will still process utilities where needed; these properties ensure editor compatibility */
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--color-border);
+    outline-color: var(--color-ring);
   }
   body {
-    @apply bg-background text-foreground;
+    /* dark navy linear + radial vignette accents like screenshot */
+    background-color: var(--background);
+    background-image: 
+      radial-gradient(800px 500px at 8% 70%, rgba(15,76,93,0.45), transparent 20%),
+      radial-gradient(700px 450px at 92% 20%, rgba(16,84,98,0.36), transparent 15%),
+      linear-gradient(180deg, rgba(3,16,24,1) 0%, rgba(6,18,35,1) 60%, rgba(6,18,35,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
 }

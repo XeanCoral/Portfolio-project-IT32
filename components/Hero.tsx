@@ -57,7 +57,7 @@ export default function Hero() {
           className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight"
         >
           Crafting Digital <br />
-          <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             Experiences
           </span>
         </motion.h1>
@@ -76,7 +76,7 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(58, 130, 246, 0.3)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-full font-semibold hover:shadow-xl transition-shadow"
+            className="px-8 py-4 bg-linear-to-r from-primary to-accent text-white rounded-full font-semibold hover:shadow-xl transition-shadow"
           >
             View My Work
           </motion.button>

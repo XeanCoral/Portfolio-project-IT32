@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Projects from '@/components/Projects'
-import Experience from '@/components/Experience'
-import Contact from '@/components/Contact'
-import Navigation from '@/components/Navigation'
-import Home from '@/components/Home' // Declare the Home component
+import Hero from '../src/components/Hero'
+import About from '../src/components/About'
+import Projects from '../src/components/Projects'
+import Experience from '../src/components/Experience'
+import Contact from '../src/components/Contact'
+import Navigation from '../src/components/Navigation'
+import Home from '../src/components/Home'
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState('home')
@@ -23,12 +23,12 @@ export default function Page() {
   }, [])
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-background via-background to-blue-50">
+    <div className="relative overflow-hidden bg-linear-to-br from-background via-background to-blue-50">
       <Navigation isScrolled={isScrolled} />
       <main className="relative">
         <Hero />
         <About />
-        <Home /> // Use the Home component
+        <Home />
         <Projects />
         <Experience />
         <Contact />

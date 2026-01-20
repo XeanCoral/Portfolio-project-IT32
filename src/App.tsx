@@ -8,7 +8,6 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import { ThemeProvider } from './components/theme-provider'
-import './globals.css'
 
 export default function App() {
   const [currentSection, setCurrentSection] = useState('home')
@@ -34,7 +33,7 @@ export default function App() {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-      <div className="min-h-screen bg-gradient-to-b from-gray-950 to-gray-900">
+      <div className="min-h-screen bg-linear-to-b from-gray-950 to-gray-900">
         <Navigation onNavigate={setCurrentSection} currentSection={currentSection} />
         <main className="pt-20">
           {renderSection()}
@@ -43,4 +42,3 @@ export default function App() {
     </ThemeProvider>
   )
 }
-

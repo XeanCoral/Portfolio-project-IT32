@@ -89,7 +89,7 @@ export default function Home() {
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               Welcome
             </span>
           </motion.h2>
@@ -131,7 +131,7 @@ export default function Home() {
                     </motion.button>
                   </>
                 ) : (
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center border-4 border-dashed border-accent">
+                  <div className="w-full h-full rounded-full bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center border-4 border-dashed border-accent">
                     <Upload className="text-accent/60" size={40} />
                   </div>
                 )}

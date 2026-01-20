@@ -53,7 +53,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Featured <span className="text-primary">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
+          <div className="w-20 h-1 bg-linear-to-r from-primary to-accent rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -67,10 +67,10 @@ export default function Projects() {
               className="group relative bg-card/50 backdrop-blur border border-border rounded-2xl p-8 overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               {/* Gradient background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 -z-10`} />
+              <div className={`absolute inset-0 bg-linear-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 -z-10`} />
 
               <div className="relative z-10">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.color} mb-6 flex items-center justify-center`}>
+                <div className={`w-12 h-12 rounded-lg bg-linear-to-br ${project.color} mb-6 flex items-center justify-center`}>
                   <div className="w-6 h-6 border-2 border-white rounded" />
                 </div>
 

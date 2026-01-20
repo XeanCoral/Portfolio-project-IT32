@@ -57,7 +57,7 @@ export default function Contact() {
           <p className="text-foreground/70 text-lg">
             I'm always open to new opportunities and collaborations. Feel free to reach out!
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mt-6" />
+          <div className="w-20 h-1 bg-linear-to-r from-primary to-accent rounded-full mx-auto mt-6" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -121,7 +121,7 @@ export default function Contact() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full px-6 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-lg font-semibold hover:shadow-lg transition-shadow"
+                className="w-full px-6 py-3 bg-linear-to-r from-primary to-accent text-white rounded-lg font-semibold hover:shadow-lg transition-shadow"
               >
                 {submitted ? '✓ Message Sent!' : 'Send Message'}
               </motion.button>
@@ -151,7 +151,7 @@ export default function Contact() {
                     whileHover={{ x: 10 }}
                     className="flex items-center gap-4 group"
                   >
-                    <div className={`p-4 rounded-lg bg-gradient-to-br ${social.color} text-white group-hover:shadow-lg transition-shadow`}>
+                    <div className={`p-4 rounded-lg bg-linear-to-br ${social.color} text-white group-hover:shadow-lg transition-shadow`}>
                       <social.icon className="w-5 h-5" />
                     </div>
                     <div>

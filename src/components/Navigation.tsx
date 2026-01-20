@@ -24,7 +24,7 @@ export default function Navigation({ isScrolled = false, onNavigate, currentSect
         <motion.div
           whileHover={{ scale: 1.05 }}
           onClick={() => onNavigate?.('home')}
-          className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent cursor-pointer"
+          className={`text-2xl font-bold ${isScrolled ? 'text-foreground' : 'text-white'} cursor-pointer`}
         >
           Portfolio
         </motion.div>
@@ -35,11 +35,7 @@ export default function Navigation({ isScrolled = false, onNavigate, currentSect
               key={item}
               onClick={() => onNavigate?.(item)}
               whileHover={{ scale: 1.05, color: '#3b82f6' }}
-              className={`text-sm font-medium transition-colors ${
-                currentSection === item 
-                  ? 'text-primary' 
-                  : 'text-foreground/70 hover:text-primary'
-              }`}
+              className={`text-sm font-medium transition-colors ${isScrolled ? 'text-foreground' : 'text-white'} hover:text-primary`}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </motion.button>
@@ -48,7 +44,7 @@ export default function Navigation({ isScrolled = false, onNavigate, currentSect
             onClick={() => onNavigate?.('contact')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-full font-medium hover:shadow-lg transition-shadow"
+            className="px-6 py-2 bg-linear-to-r from-primary to-accent text-white rounded-full font-medium hover:shadow-lg transition-shadow"
           >
             Get In Touch
           </motion.button>

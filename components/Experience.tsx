@@ -58,7 +58,7 @@ export default function Experience() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             My <span className="text-primary">Experience</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
+          <div className="w-20 h-1 bg-linear-to-r from-primary to-accent rounded-full" />
         </motion.div>
 
         <div className="space-y-6">
@@ -95,7 +95,7 @@ export default function Experience() {
                       transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
                       className="flex items-start gap-3"
                     >
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <span className="text-foreground/75">{achievement}</span>
                     </motion.div>
                   ))}
@@ -103,7 +103,7 @@ export default function Experience() {
               </div>
 
               {index < experiences.length - 1 && (
-                <div className="absolute -left-1 top-16 w-0.5 h-12 bg-gradient-to-b from-accent/50 to-transparent ml-3" />
+                <div className="absolute -left-1 top-16 w-0.5 h-12 bg-linear-to-b from-accent/50 to-transparent ml-3" />
               )}
             </motion.div>
           ))}

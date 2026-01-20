@@ -83,12 +83,12 @@ export default function Home() {
         className="relative z-10 max-w-2xl w-full"
       >
         <div className="text-center mb-12">
-          <motion.h2
+            <motion.h2
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-              Welcome
+            <span className="text-white">
+              Welcome to my Portfolio!!
             </span>
           </motion.h2>
           <motion.p
@@ -129,7 +129,7 @@ export default function Home() {
                     </motion.button>
                   </>
                 ) : (
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center border-4 border-dashed border-accent">
+                  <div className="w-full h-full rounded-full bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center border-4 border-dashed border-accent">
                     <Upload className="text-accent/60" size={40} />
                   </div>
                 )}
@@ -190,10 +190,10 @@ export default function Home() {
                   onClick={() => setIsEditing(true)}
                   className="cursor-pointer group"
                 >
-                  <h3 className="text-3xl md:text-4xl font-bold text-center text-foreground group-hover:text-accent transition-colors">
+                  <h3 className="text-3xl md:text-4xl font-bold text-center text-black dark:text-foreground group-hover:text-accent transition-colors">
                     {userName}
                   </h3>
-                  <p className="text-center text-sm text-muted-foreground mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="text-center text-sm text-black/70 dark:text-muted-foreground mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     Click to edit name
                   </p>
                 </div>
@@ -206,22 +206,22 @@ export default function Home() {
                 variants={itemVariants}
                 className="text-center"
               >
-                <p className="text-2xl font-bold text-accent">5+</p>
-                <p className="text-sm text-muted-foreground">Projects</p>
+                <p className="text-2xl font-bold text-black">5+</p>
+                <p className="text-sm text-black/70">Projects</p>
               </motion.div>
               <motion.div
                 variants={itemVariants}
                 className="text-center"
               >
-                <p className="text-2xl font-bold text-accent">3+</p>
-                <p className="text-sm text-muted-foreground">Years XP</p>
+                <p className="text-2xl font-bold text-black">3+</p>
+                <p className="text-sm text-black/70">Years XP</p>
               </motion.div>
               <motion.div
                 variants={itemVariants}
                 className="text-center"
               >
-                <p className="text-2xl font-bold text-accent">10+</p>
-                <p className="text-sm text-muted-foreground">Clients</p>
+                <p className="text-2xl font-bold text-black">10+</p>
+                <p className="text-sm text-black/70">Clients</p>
               </motion.div>
             </div>
           </div>
