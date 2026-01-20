@@ -159,7 +159,7 @@ export default function Contact() {
                       <p className="text-sm text-foreground/60">
                         {social.label === 'Email' && 'hello@example.com'}
                         {social.label === 'LinkedIn' && 'linkedin.com/in/yourprofile'}
-                        {social.label === 'GitHub' && 'github.com/yourprofile'}
+                        {social.label === 'GitHub' && 'https://github.com/XeanCoral?tab=repositories'}
                         {social.label === 'Twitter' && '@yourhandle'}
                       </p>
                     </div>
